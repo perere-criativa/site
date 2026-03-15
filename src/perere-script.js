@@ -30,23 +30,22 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function inicializarTextura() {
         texturaFixa.classList.add(TEXTURAS[indiceTexturaAtual]);
-        aplicarFonte(indiceTexturaAtual);
+        aplicarFonte(0, indiceTexturaAtual);
     }
 
     /**
      * Aplica a classe de fonte aos h1 (otimizado)
-     * @param {number} indice - Índice da fonte a aplicar
+     * @param {number} indiceAnterior - Índice da fonte anterior
+     * @param {number} indiceNovo - Índice da nova fonte
      */
-    function aplicarFonte(indice) {
-        const fontAnterior = FONTES[indiceTexturaAtual];
-        const fontNova = FONTES[indice];
+    function aplicarFonte(indiceAnterior, indiceNovo) {
+        const fontAnterior = FONTES[indiceAnterior];
+        const fontNova = FONTES[indiceNovo];
         
-        // Apenas remove a fonte anterior e adiciona a nova
+        // Remove a fonte anterior e adiciona a nova
         todosH1.forEach(h1 => {
-            if (fontAnterior !== fontNova) {
-                h1.classList.remove(fontAnterior);
-                h1.classList.add(fontNova);
-            }
+            h1.classList.remove(fontAnterior);
+            h1.classList.add(fontNova);
         });
     }
 
@@ -54,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
      * Rotaciona para a próxima textura e fonte
      */
     function rotacionarTextura() {
+        const indiceAnterior = indiceTexturaAtual;
+        
         // Remove textura atual
         texturaFixa.classList.remove(TEXTURAS[indiceTexturaAtual]);
         
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         texturaFixa.classList.add(TEXTURAS[indiceTexturaAtual]);
         
         // Aplica nova fonte
-        aplicarFonte(indiceTexturaAtual);
+        aplicarFonte(indiceAnterior, indiceTexturaAtual);
     }
 
     // Inicializa com primeira textura e fonte

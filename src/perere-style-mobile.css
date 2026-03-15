@@ -1,0 +1,340 @@
+/* perere-style-mobile.css - Adaptação para Mobile */
+/* Inclui este arquivo APÓS perere-style-home.css para manter todas as características em mobile */
+
+@media (max-width: 768px) {
+    
+    /* ========== Reset para Mobile ========== */
+    html {
+        scroll-padding-top: 0;
+    }
+
+    /* ========== Seções e Layout ========== */
+    .inicio,
+    .secao {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+
+    .conteudo_completo {
+        flex-direction: row !important;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 0;
+    }
+
+    /* ========== Lado Esquerdo e Direito ========== */
+    .lado_esquerdo {
+        width: 40% !important;
+        height: 100vh;
+        padding-left: 2% !important;
+        padding-right: 2% !important;
+        padding-bottom: 2% !important;
+        text-align: right;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .lado_direito {
+        width: 60% !important;
+        height: 100vh;
+        background-color: #FFFFFF;
+        padding-right: 3% !important;
+        padding-left: 2% !important;
+        padding-top: 2% !important;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    /* ========== Texto Esquerdo ========== */
+    .texto_esquerdo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    /* ========== Tipografia em Mobile ========== */
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.1rem !important;
+        word-break: break-word;
+    }
+
+    h1.fonte1 {
+        font-size: 1.5rem !important;
+    }
+
+    h1.fonte2 {
+        font-size: 1.5rem !important;
+        letter-spacing: 0rem !important;
+    }
+
+    h1.fonte3 {
+        font-size: 1.8rem !important;
+        letter-spacing: 0rem !important;
+    }
+
+    h1.fonte4 {
+        font-size: 1.6rem !important;
+        letter-spacing: 0rem !important;
+    }z
+
+    h1.fonte5 {
+        font-size: 1.5rem !important;
+        letter-spacing: 0rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem !important;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* ========== Ações e Botões ========== */
+    .acoes-bottom {
+        flex-direction: column;
+        gap: 0rem;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 0;
+    }
+
+    .btn-proximo {
+        width: fit-content;
+        padding: 1rem 1.5rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 6px;
+    }
+
+    /* ========== Esconder Botões na Seção Serviços ========== */
+    #Serviços .acoes-bottom {
+        display: none;
+    }
+
+    /* ========== Logo ========== */
+    .logo_1 {
+        width: 70vw;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+    }
+
+    /* ========== Espaçamento ========== */
+    .espaco {
+        height: 1rem;
+    }
+
+    .noMeio,
+    .noInicio,
+    .spacado {
+        gap: 1rem !important;
+    }
+
+    /* ========== Galeria em Mobile ========== */
+    .galeria-secao {
+        width: 100%;
+        padding: 1rem 0;
+        margin-bottom: 1.5rem;
+        gap: 0.8rem;
+        border-bottom: 2px solid var(--cor-primaria);
+        padding-bottom: 1.5rem;
+    }
+
+    .galeria-secao h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* Container da galeria */
+    .gallery {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 8px;
+    }
+
+    /* Imagem da galeria */
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Controles de galeria */
+    .controles-galeria {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .controles-galeria button {
+        padding: 0.6rem 1rem !important;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .controles-galeria button:active {
+        transform: scale(0.95);
+    }
+
+    /* ========== Seção Fotografia ========== */
+    #Fotografia {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #Fotografia .conteudo_completo {
+        height: auto;
+    }
+
+    #Fotografia .lado_direito {
+        height: auto;
+    }
+
+    /* ========== Links ========== */
+    a {
+        text-decoration: underline;
+        transition: all 0.3s ease;
+    }
+
+    a:active {
+        opacity: 0.7;
+    }
+
+    /* ========== Background Fixo ========== */
+    #textura-fixa {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    /* ========== Texturas Otimizadas para Mobile ========== */
+    /* Mantém as texturas mas um pouco reduzidas em tamanho */
+    
+    .textura1 {
+        --s: 20px;
+    }
+
+    .textura2 {
+        --s: 150px;
+    }
+
+    .textura3 {
+        --s: 60px;
+    }
+
+    .textura4 {
+        --s: 60px;
+    }
+
+    .textura5 {
+        --s: 150px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    /* ========== Ajustes para Telas Muito Pequenas ========== */
+    
+    .conteudo_completo {
+        padding: 0.75rem 0.5rem;
+        gap: 0.3rem;
+    }
+
+    .lado_esquerdo {
+        width: 40% !important;
+        padding-left: 1.5% !important;
+        padding-right: 1.5% !important;
+    }
+
+    .lado_direito {
+        width: 60% !important;
+        padding-right: 2% !important;
+        padding-left: 1.5% !important;
+    }
+
+    h1 {
+        font-size: 1.4rem !important;
+    }
+
+    h1.fonte1 {
+        font-size: 1.6rem !important;
+    }
+
+    h1.fonte2 {
+        font-size: 1.6rem !important;
+        letter-spacing: 0.15rem !important;
+    }
+
+    h1.fonte3 {
+        font-size: 1.8rem !important;
+        letter-spacing: 0.1rem !important;
+    }
+
+    h1.fonte4 {
+        font-size: 1.8rem !important;
+    }
+
+    h1.fonte5 {
+        font-size: 1.8rem !important;
+    }
+
+    h2 {
+        font-size: 1.2rem !important;
+    }
+
+    p {
+        font-size: 0.85rem !important;
+    }
+
+    .btn-proximo {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.65rem !important;
+    }
+
+    .logo_1 {
+        width: 70vw;
+        max-width: 150px;
+    }
+
+    .gallery {
+        aspect-ratio: 1;
+    }
+
+    .controles-galeria {
+        gap: 0.8rem;
+    }
+
+    .controles-galeria button {
+        padding: 0.5rem 0.8rem !important;
+        font-size: 1rem;
+    }
+
+    /* ========== Esconder Botões na Seção Serviços ========== */
+    #Serviços .acoes-bottom {
+        display: none;
+    }
+
+}
