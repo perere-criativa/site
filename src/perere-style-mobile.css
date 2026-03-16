@@ -11,7 +11,7 @@
     /* ========== Seções e Layout ========== */
     .inicio,
     .secao {
-        height: auto;
+        height: 100vh;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -31,9 +31,6 @@
     .lado_esquerdo {
         width: 40% !important;
         height: 100vh;
-        padding-left: 2% !important;
-        padding-right: 2% !important;
-        padding-bottom: 2% !important;
         text-align: right;
         align-items: flex-end;
         justify-content: flex-start;
@@ -43,9 +40,6 @@
         width: 60% !important;
         height: 100vh;
         background-color: #FFFFFF;
-        padding-right: 3% !important;
-        padding-left: 2% !important;
-        padding-top: 2% !important;
         text-align: left;
         align-items: flex-start;
     }
@@ -142,7 +136,7 @@
     .noMeio,
     .noInicio,
     .spacado {
-        gap: 1rem !important;
+        gap: 0rem !important;
     }
 
     /* ========== Galeria em Mobile ========== */
@@ -150,7 +144,7 @@
         width: 100%;
         padding: 1rem 0;
         margin-bottom: 1.5rem;
-        gap: 0.8rem;
+        gap: 0rem;
         border-bottom: 2px solid var(--cor-primaria);
         padding-bottom: 1.5rem;
     }
@@ -260,7 +254,7 @@
     
     .conteudo_completo {
         padding: 0.75rem 0.5rem;
-        gap: 0.3rem;
+        gap: 0rem;
     }
 
     .lado_esquerdo {
@@ -277,28 +271,38 @@
 
     h1 {
         font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.05rem !important;
     }
 
     h1.fonte1 {
-        font-size: 1.6rem !important;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0rem !important;
     }
 
     h1.fonte2 {
-        font-size: 1.6rem !important;
-        letter-spacing: 0.15rem !important;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.2rem !important;
     }
 
     h1.fonte3 {
-        font-size: 1.8rem !important;
-        letter-spacing: 0.1rem !important;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.29rem !important;
     }
 
     h1.fonte4 {
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.25rem !important;
     }
 
     h1.fonte5 {
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0.18em !important;
     }
 
     h2 {
